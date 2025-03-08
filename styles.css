@@ -1082,6 +1082,7 @@ body {
     display: none;
   }
   .search-bar {
+    
   }
 
   body {
@@ -1104,21 +1105,27 @@ body {
     width: 100%;
     border-right: none;
     border-bottom: 1px solid #eee;
+    display: none;
   }
 
   .search-input {
     width: 100%;
+    display: none;
   }
 
   .search-actions {
     width: 100%;
     padding: 15px;
     justify-content: space-between;
+    display: none;
+
   }
 
   .search-actions .btn {
     flex: 1;
     margin: 0 5px;
+    display: none;
+
   }
 
   .mobile-hero-search {
@@ -1166,5 +1173,39 @@ body {
     display: none;
     justify-content: center;
   }
+}
+
+
+
+
+/* search bar  */
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid yellow;
+  border-radius: 8px;
+  padding: 8px;
+  max-width: 400px;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 40px;
+}
+.search-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  color: gray;
+}
+.search-field {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  background: transparent;
+}
+
+.search-form{
+  display: none;
 }
 
