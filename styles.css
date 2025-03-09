@@ -147,29 +147,55 @@ body {
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: rgb(32, 22, 22);
+  background-color: rgba(10, 22, 41, 0.601);
   border-radius: 12px;
-  padding: 8px;
+  padding: 6px;
   max-width: 1000px;
   overflow: hidden;
 }
 
 .property-types {
-  display: none;
+  display: flex;
   gap: 15px;
   margin-bottom: 30px;
-  flex-wrap: wrap;
+  background: #000;
 }
 
-.property-type {
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.icon-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0 10px;
 }
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.icon-primary {
+  fill: #F3BE72;
+}
+
+.icon-secondary {
+  fill: #ffffff;
+  transform: translateY(100%);
+}
+
+.icon-container:hover .icon-primary {
+  transform: translateY(-100%);
+}
+
+.icon-container:hover .icon-secondary {
+  transform: translateY(0);
+}
+
 
 .type-icon {
   width: 30px;
@@ -1144,6 +1170,10 @@ body {
   .benefits-grid {
     grid-template-columns: 1fr;
   }
+  .icon-container {
+    width: 40px;
+    height: 40px;
+  }
 
 
   .search-actions {
@@ -1156,14 +1186,10 @@ body {
     text-align: left;
   }
 
-  .property-types {
-    display: none;
-    justify-content: center;
-  }
 }
 
 .search-container {
-  background: rgb(32, 22, 22);
+  background: rgba(10, 22, 41, 0.601);
   padding: 10px;
   border-radius: 8px;
   align-items: center;
@@ -1183,10 +1209,23 @@ body {
     padding: 5px;
     gap: 5px;
   }
+  .icon-container {
+    width: 30px;
+    height: 30px;
+  }
 
   .search-i {
     width: 150px;
     padding: 8px;
     font-size: 14px;
   }
+}
+.banner {
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
 }
